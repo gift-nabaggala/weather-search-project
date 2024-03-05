@@ -20,14 +20,14 @@ function displayData(response) {
   console.log(response);
 
   let currentTime = document.querySelector("#time");
-  let date = new Date(response.data.dt * 1000);
+  let date = new Date(response.data.time * 1000);
   currentTime.innerHTML = formatDate(date);
 
   let descriptionElement = document.querySelector("#description");
-  descriptionElement.innerHTML = response.data.weather[0].description;
+  descriptionElement.innerHTML = response.data.condition.description;
 
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = `${response.data.main.humidity}%`;
+  humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
 
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
