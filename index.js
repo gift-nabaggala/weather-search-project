@@ -31,6 +31,10 @@ function displayData(response) {
 
   let windElement = document.querySelector("#wind-speed");
   windElement.innerHTML = `${response.data.wind.speed}km/h`;
+
+  let iconElement = document.querySelector("#icon");
+  iconUrl = response.data.condition.icon_url;
+  iconElement.innerHTML = `<img src="${iconUrl}">`;
 }
 function searchCity(event) {
   event.preventDefault();
