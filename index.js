@@ -43,7 +43,8 @@ let weatherSearchForm = document.querySelector("#weather-search-form");
 
 weatherSearchForm.addEventListener("submit", searchCity);
 
-let apiKey = "697dc56b8a47c620abe747b2cdddb1b0";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric`;
+let city = "Paris";
+let apiKey = "344fd2b82ccb20at17163b1f587bo614";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayData);
