@@ -67,3 +67,20 @@ function searchCitySubmit(event) {
 let weatherSearchForm = document.querySelector("#weather-search-form");
 
 weatherSearchForm.addEventListener("submit", searchCitySubmit);
+
+let forecast = document.querySelector("#forecast");
+
+forecast.innerHTML = `
+<div class="weather-forecast-day">
+            <div class="weather-forecast-date">Thur</div>
+            <div class="weather-forecast-icon">🌞</div>
+            <div class="weather-forecast-temperatures">
+              <div class="weather-forecast-temperatures">
+                <strong>15°</strong>
+              </div>
+              <div class="weather-forecast-temperatures">
+                9°
+              </div>
+            </div>
+          </div>
+`;
